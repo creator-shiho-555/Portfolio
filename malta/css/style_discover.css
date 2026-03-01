@@ -1,0 +1,420 @@
+@charset "UTF-8";
+/* CSS document */
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* ここからリンクボタン */
+.link-button-area {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.link-button {
+    background-color: #00b7ff;
+    display: inline-block;
+    min-width: 175px;
+    line-height: 60px;
+    border-radius: 50px;
+    font-family: "Kiwi Maru", serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/* マウスオン */
+.menu-btn:hover{   /* ハンバーガーメニュー*/
+    background-color: #289aff;
+}
+.menu-btn{   /* ハンバーガーメニュー*/
+    cursor: pointer;
+}
+/* ここまでリンクボタン */
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #000;
+    line-height: 1;
+    background-color: #FFFFFF;
+}
+
+img {
+    max-width: 100%; /* 120%から100%に変更 */
+    height: auto;    /* 縦横比を維持 */
+}
+/* 料金表ここから */
+
+/* ここまで表 */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* これで横幅いっぱいに広がります（半分白いのが直ります） */
+    height: 80px;
+    /*background-color: #ffffff;　ナビゲーション白塗り*/
+    backdrop-filter: blur(8px);/*ナビゲーション透明*/
+    z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+/* これたぶんいらない */
+nav .nav-logo{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 65px;
+    width: 60px;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+.header-logo2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-logo-text h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: #e61348;
+}
+.header-logo img {
+    border-radius: 50%;
+}
+
+.header-inner {
+    max-width: 1310px;
+    width: 100%;
+margin: 0 auto;
+    padding: 0 20px; /* 左右の余白を少し確保 */
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-site-menu{
+    margin-right: 30px;
+    margin-top: 0px;
+    display: block; /*【PC版の設定】PC用のナビゲーションを表示する*/
+}
+.toggle-menu-button {
+    display: none;
+}
+
+.site-menu ul {
+    display: flex;
+}
+.site-menu ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.site-menu ul a {
+    font-family: 'キウイ丸', serif;
+    font-weight:  bold;
+}
+
+.main {
+    padding-top: 80px; /* ヘッダーに被らないようにする */
+    padding-bottom: 80px; /* ヘッダーの高さ分、中身を下げる（重要！） */
+    background-color: #def0ff;
+    width: 100%;
+    overflow: hidden; /* 横はみ出しを強制カット */
+}
+.footer {
+    color: #ffffff;
+    background-color: #24211b;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: block;
+    width: 120px;
+    margin-top: 20px;
+}
+.footer-logo img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.footer-tel {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.footer-time {
+    font-size: 13px;
+    margin-top: 16px;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 90;
+}
+
+.footer-tel {
+    font-size: 20px;
+}
+.copyright {
+    margin-top: 50px;
+}
+.picture {
+    display: block; /* 一旦flexを解除して縦に並べる準備 */
+    width: 90%;    /* 画面幅に合わせる */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.picture img {
+    margin: 10px;
+    /*border-radius: 5px;/*各丸指定*/
+    /*border-radius: 50%;/*正円＝あとは％で指定*/
+    width: 250px;
+
+}
+.pic1,
+.pic2,
+.pic3,
+.pic4 {
+    display: flex;
+    font-size: 18px;
+    line-height: 1.5;
+    align-items: flex-end;
+    margin:20px 0 30px 0;
+}
+.pic1 p,
+.pic2 p,
+.pic3 p,
+.pic4 p {
+    margin: 10px;
+}
+#valletta1,
+#valletta2,
+#church1,
+#church2,
+#beach1,
+#beach2,
+#restaurant1,
+#restaurant2 {
+    scroll-margin-top: 120px;
+}
+
+
+/* タイル型
+.picture {
+    disply: gaid;
+    justify-content: space-around;
+    gap: 10px;
+    grid-tempate-colums: 300px 300px 300px 300px;
+    grid-tempate-rows: 200px 200px;
+
+*/
+
+.picture {
+    max-width: 1600px; /* 最大値 */
+    /*max-height: 1600px;  最大値 */
+    /* min-width: 500px; /最小値*/
+    /* min-height: 500px; /最小値*/
+    padding: 10px;
+}
+
+/*.box_check {
+    margin-left: 260px;
+    margin-right: 260px;
+}
+
+.box_pri {
+    text-align: center;
+    margin: 30px;
+}
+
+.box_pri h4 {
+    justify-content: space-around;
+}
+.box_check {
+    text-align: center;
+}
+.btn {
+    text-align: center;
+}
+*/
+
+/* ここからハンバーガーメニュー */
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 900;
+    background-color: #3584bb;
+}
+.menu-btn span, .menu-btn span:before, .menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255,255,255,0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top:0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing:  border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 0
+}
+.hamburger-menu { /*【共通設定】まず、PCではハンバーガーメニューを「消して」おく */
+    display: none;
+}
+
+/* --- レスポンシブ対応 (800px以下) --- */
+@media (max-width: 800px) {
+    /* PC用のナビを隠し、ハンバーガーだけにする */
+    .header-site-menu {
+        display: none;
+    }
+    /* 隠していたハンバーガーメニューを表示させる */
+    .hamburger-menu {   
+        display: block;  
+    }
+    .menu-btn {
+        z-index: 9000; /* ヘッダー(100)より上に配置 */
+    }
+    .menu-content {
+        display: block;    /* 念のため表示を確実にする */
+        width: 100%;       /* 画面幅いっぱい */
+        height: 100vh;     /* 画面の高さ100%分（これが重要！） */
+        position: fixed;   /* 画面に固定 */
+        top: 0;            /* 画面の一番上から */
+        left: 100%;        /* 閉じてる時は右側に隠す */
+        z-index: 1000;      /* ヘッダーより上にくるように大きく設定 */
+        background-color: #3584bb; /* メニューの背景色 */
+        transition: all 0.5s;
+    }
+    /* メニューが開いたとき（チェックが入ったとき） */
+    #menu-btn-check:checked ~ .menu-content {
+        left: 0;           /* 画面の左端に合わせて全画面表示 */
+    }
+    /* メニュー内のリストの位置調整 */
+    .menu-content ul {
+        padding-top: 100px; /* ヘッダーと重ならないように上に余白を作る */
+    }
+    
+    /* 画像とテキストの横並びを解除して縦に並べる */
+    .pic1, .pic2, .pic3, .pic4 {
+        display: flex;
+        flex-direction: column; /* 縦並び */
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .pic2, .pic4 {
+        /* 縦並びにした上で、中身の順番を上下逆転させる */
+        flex-direction: column-reverse; 
+    }
+
+    /* スマホの時は画像の幅を広げる */
+    .picture img {
+        width: 100%; 
+        max-width: 400px; /* 大きくなりすぎないよう制限 */
+        height: auto;
+        margin: 10px 0;
+    }
+}

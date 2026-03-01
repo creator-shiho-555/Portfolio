@@ -1,0 +1,594 @@
+@charset "UTF-8";
+/* CSS document */
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.first-view {
+    height: calc(100vh - 80px);/* ヘッダー分を引く */
+    margin-top: 80px; /* 固定ヘッダーの下に潜り込まないようにする */
+    background-image: url("../img/2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.first-view-text {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 80px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px #070beb;
+}
+
+.first-view-text h1 {
+  font-family: "Kiwi Maru", serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 72px;
+  font-size: 45px;
+}
+
+.first-view-text p {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.lead-text {
+    background-color: #b1dbfe;
+    line-height: 2;
+    text-align: center;
+    margin: 30px 120px;
+    padding: 20px 0 20px 0;
+    border-radius: 24px;
+    font-family: "Kiwi Maru", serif;
+    font-style: normal;
+    font-size: 20px;
+}
+.pc-lead-text{
+    display: block; /* PCでは表示 */
+}
+.sp-lead-text {
+    display: none; /* スマホ用画像はデフォルトで非表示 */
+}
+
+/* ここからリンクボタン */
+.link-button-area {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 25px 0;
+
+}
+.link-button {
+    background-color: #00b7ff;
+    display: inline-block;
+    min-width: 175px;
+    line-height: 60px;
+    border-radius: 50px;
+    font-family: "Kiwi Maru", serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* マウスオン */
+.link-button:hover{   /* 全リンク */
+    background-color: #ffffff;
+    color: #070beb;
+}
+.menu-btn:hover{   /* ハンバーガーメニュー*/
+    background-color: #289aff;
+}
+.menu-btn{   /* ハンバーガーメニュー*/
+    cursor: pointer;
+}
+.ticket-heading-text:hover{
+    color: #e61348;
+} 
+/* ここまでリンクボタン */
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    background-color: #FFFFFF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.company-text {
+    line-height: 1.5;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 150px 0 20px 0;
+    font-family: "Kiwi Maru", serif;
+    font-style: normal;
+    font-size: 20px;
+}
+.company-font{
+    font-size: 24px;
+}
+
+
+/* 料金表ここから */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #33b1ff;
+    text-align: center;
+    height: 40px;
+    color: #ffffff; 
+}
+
+th,td {
+    border: solid 1px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ここまで表 */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*background-color: #ffffff;　ナビゲーション白塗り*/
+    backdrop-filter: blur(12px);/*ナビゲーション透明*/
+    height: 80px;
+    z-index: 100;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.7);
+}
+/* これたぶんいらない */
+nav .nav-logo{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 65px;
+    width: 60px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.header-logo2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-logo-text h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: #e61348;
+}
+.header-logo img {
+    border-radius: 50%;
+}
+
+.header-inner {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-site-menu{
+    margin-right: 30px;
+    margin-top: 0px;
+    display: block; /*【PC版の設定】PC用のナビゲーションを表示する*/
+}
+.toggle-menu-button {
+    display: none;
+}
+
+.site-menu ul {
+    display: flex;
+}
+.site-menu ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.site-menu ul a {
+    font-family: 'キウイ丸', serif;
+    font-weight:  bold;
+}
+
+.footer {
+    color: #ffffff;
+    background-color: #24211b;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: block;
+    width: 120px;
+    margin-top: 20px;
+}
+.footer-logo img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.footer-tel {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.footer-time {
+    font-size: 13px;
+    margin-top: 16px;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 90;
+}
+
+.main {
+    padding-bottom: 50px;
+    background-color: #def0ff;
+}
+
+.footer-tel {
+    font-size: 20px;
+}
+.copyright {
+    margin-top: 50px;
+}
+
+.ticket-heading {
+    margin: 0 auto;
+    padding: 100px 0 30px 0;
+    color: #009dff;
+    font-size: 25px;
+    font-family: "Kiwi Maru", serif;
+    font-style: normal;
+}
+.ticket-heading-2{
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+.ticket-heading-text{
+    display: block;
+    text-align: center;
+}
+.ticket-heading-name-1{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: #e61348;
+}
+
+/*レスポンシブデザイン前のコード
+.picture img {
+    padding: 10px;
+    /*border-radius: 5px;/*各丸指定
+    border-radius: 50%;/*正円＝％で指定
+    width: 200px;
+    height: 200px;
+}
+*/
+
+/*レスポンシブデザイン修正後のコード*/
+.picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.picture img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #707070;
+}
+
+/* タイル型 先生のコード
+.picture {
+    disply: gaid;
+    justify-content: space-around;
+    gap: 10px;
+    grid-tempate-colums: 300px 300px 300px 300px;
+    grid-tempate-rows: 200px 200px;
+
+*/
+
+/*レスポンシブデザイン前のコード
+.picture {
+    /*max-width: 1600px;  最大値
+    max-height: 1600px; /* 最大値 */
+    /* min-width: 500px; /最小値*/
+    /* min-height: 500px; /最小値
+    padding: 10px 0 0 160px;
+    display: flex;      
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: auto;
+    margin: 0 auto 60px;
+*/
+
+/*レスポンシブデザイン対応修正コード*/
+.picture {
+    display: grid;/* 「同じ幅で3列作る」という指示 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;             /* 画像同士の隙間（縦横共通） */
+    max-width: 700px;      /* 3枚並んだ時の全体の幅 */
+    margin: 0 auto 60px;   /* 中央寄せ */
+    justify-items: center; /* 中の画像を中央に寄せる */
+}
+
+/*先生のコード
+/*.box_check {
+    margin-left: 260px;
+    margin-right: 260px;
+}
+
+.box_pri {
+    text-align: center;
+    margin: 30px;
+}
+
+.box_pri h4 {
+    justify-content: space-around;
+}
+.box_check {
+    text-align: center;
+}
+.btn {
+    text-align: center;
+}
+*/
+
+/* ここからハンバーガーメニュー */
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #3584bb;
+}
+.menu-btn span, .menu-btn span:before, .menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255,255,255,0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top:0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing:  border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #3584bb;
+    /* transition: all 0.5s; ハンバーガーメニューのホバー*/
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 0
+}
+.hamburger-menu { /*【共通設定】まず、PCではハンバーガーメニューを「消して」おく */
+    display: none;
+}
+
+
+/*========SP=========*/
+@media (max-width: 1000px){
+    .first-view {
+        height: calc(100vh - 50px);
+        background-image: url("../img/2.jpg");
+        /* background-position: 左右 上下; */
+        background-position: 77% center;
+    }    
+}
+
+@media (max-width: 800px){
+    .first-view-text{
+        padding-right: 0;  
+        padding-left: 20px;
+        height: 444px;
+    }        
+    .first-view-text h1{
+        font-size: 25px;
+        line-height: 40px; 
+    }
+    .first-view-text p{
+        font-size: 20px;
+    }
+
+    .header-site-menu { 
+        display: none;  /* PC用の横並びナビゲーションを隠す */
+    }
+    .site-menu ul {
+        display: block;
+        text-align: center;
+    }
+    .hamburger-menu {   
+        display: block;  /* 隠していたハンバーガーメニューを表示させる */
+    }
+        .menu-btn {
+        z-index: 9000; /* ヘッダー(100)より上に配置 */
+    }
+    .menu-content {
+        display: block;    /* 念のため表示を確実にする */
+        width: 100%;       /* 画面幅いっぱい */
+        height: 100vh;     /* 画面の高さ100%分（これが重要！） */
+        position: fixed;   /* 画面に固定 */
+        top: 0;            /* 画面の一番上から */
+        left: 100%;        /* 閉じてる時は右側に隠す */
+        z-index: 1000;      /* ヘッダーより上にくるように大きく設定 */
+        background-color: #3584bb; /* メニューの背景色 */
+        transition: all 0.5s;
+    }
+    .lead-text {
+        width: 80%;       /* 画面に対してどのくらいの幅にするか */
+        max-width: 300px; /* 大きくなりすぎない上限 */
+        margin: 20px auto; /* 上下に隙間、左右は中央寄せ */
+        /*枠の中の余白を小さくして、画像との一体感を出す */
+        padding: 8px;      
+        line-height: 0;   /* 画像の下に変な隙間が出るのを防ぐおまじない */
+    }
+    .pc-lead-text {
+        display: none; /* PC用のテキストを消す */
+        padding: 0; /* paddingを消して画像と外枠を密着させる */
+    }
+    .sp-lead-text {
+        display: block;
+        width: 100%;      /* 親の 300px いっぱいに広がる */
+        height: auto;
+    }
+
+/*修正コード*/
+    .picture img {
+    width: 130px; /* スマホで見やすいサイズに調整 */
+    height: 130px;
+    }
+
+    .picture {
+        grid-template-columns: repeat(2, 1fr); /* スマホでは2列にする */
+        gap: 15px;
+    }
+    .pic9 {
+        justify-self: center; /* Gridの中で自分を左右中央に配置 */
+        grid-column: 1 / -1;  /* もし1枚だけ独立して1行使わせたいならこれ！ */
+    }
+    .company-font{
+        font-size: 20px;
+    }
+    .company-text{
+        font-size: 17px;
+    }
+    .ticket-heading{
+        font-size: 18px;
+    }
+    .ticket-heading-name-1{
+        font-size: 18px;
+    }
+}
+
+/*フルスクリーンレイアウト修正前のコード
+@media (max-width: 800px) {
+    .picture img {
+        height: 110px;
+        width: 110px;
+    }
+}
+
+@media (max-width: 800px) {
+    .picture {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+}  
+*/

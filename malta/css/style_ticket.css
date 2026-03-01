@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/* CSS document */
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ここからリンクボタン */
+.link-button-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.link-button {
+    background-color: #00b7ff;
+    display: inline-block;
+    min-width: 175px;
+    line-height: 60px;
+    border-radius: 50px;
+    font-family: "Kiwi Maru", serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/* マウスオン */
+.link-button:hover{   /* 全リンク */
+    background-color: #ffffff;
+}
+.menu-btn:hover{   /* ハンバーガーメニュー*/
+    background-color: #289aff;
+}
+.menu-btn{   /* ハンバーガーメニュー*/
+    cursor: pointer;
+}
+.link-button:hover{
+    color: #070beb;
+}
+.ticket-heading-text:hover{
+    color: #e61348;
+} 
+
+/* ここまでリンクボタン */
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #000;
+    line-height: 1;
+    background-color: #FFFFFF;
+}
+
+img {
+    max-width: 120%;
+}
+
+/* 料金表ここから */
+.midashi {
+    display: block;
+    padding-top: 130px;
+    text-align: center;
+    font-size: 25px;
+    color: #070beb;
+}
+
+table {
+    border-collapse: separate;
+    width: 500px;
+    border-spacing: 0;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #070beb;
+}
+
+tr {
+    display: table-row;
+}
+
+th {
+    background-color: #33b1ff;
+    text-align: center;
+    height: 40px;
+    color: #ffffff;
+    border-bottom: 0.5px solid #ffffff;
+}
+
+td {
+    border-bottom: 0.5px solid #070beb; 
+
+}
+
+th,td {   
+    text-align: center;
+    padding: 10px;
+    display: table-cell;
+}
+.single-bord{
+    border-bottom: hidden;
+}
+
+/* ここまで表 */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 80px;
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+/* これたぶんいらない */
+nav .nav-logo{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 65px;
+    width: 60px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.header-logo2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-logo-text h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: #e61348;
+}
+.header-logo img {
+    border-radius: 50%;
+}
+
+.header-inner {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-site-menu{
+    margin-right: 30px;
+    margin-top: 0px;
+}
+.toggle-menu-button {
+    display: none;
+}
+
+.site-menu ul {
+    display: flex;
+}
+.site-menu ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.site-menu ul a {
+    font-family: 'キウイ丸', serif;
+    font-weight:  bold;
+}
+
+
+.footer {
+    color: #ffffff;
+    background-color: #24211b;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: block;
+    width: 120px;
+    margin-top: 20px;
+}
+.footer-logo img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.footer-tel {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.footer-time {
+    font-size: 13px;
+    margin-top: 16px;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 90;
+}
+
+
+.main {
+    padding-bottom: 50px;
+    background-color: #def0ff;
+}
+
+.footer-tel {
+    font-size: 20px;
+}
+.copyright {
+    margin-top: 50px;
+}
+
+
+.ticket-heading {
+    margin: 0 auto;
+    padding: 100px 0 30px 0;
+    color: #009dff;
+    font-size: 25px;
+    font-family: "Kiwi Maru", serif;
+    font-style: normal;
+}
+.ticket-heading-2{
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+.ticket-heading-text{
+    display: block;
+    text-align: center;
+}
+.ticket-heading-name-1{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: #e61348;
+}
+.picture {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 620px;
+    margin: 0 auto 60px;
+}
+
+.picture img {
+    padding: 10px;
+    /*border-radius: 5px;/*各丸指定*/
+    border-radius: 50%;/*正円＝あとは％で指定*/
+    width: 200px;
+    height: 200;
+}
+
+/* タイル型
+.picture {
+    disply: gaid;
+    justify-content: space-around;
+    gap: 10px;
+    grid-tempate-colums: 300px 300px 300px 300px;
+    grid-tempate-rows: 200px 200px;
+
+*/
+
+.picture {
+    max-width: 1600px; /* 最大値 */
+    max-height: 1600px; /* 最大値 */
+    /* min-width: 500px; /最小値*/
+    /* min-height: 500px; /最小値*/
+    padding: 10px;
+}
+
+/*.box_check {
+    margin-left: 260px;
+    margin-right: 260px;
+}
+
+.box_pri {
+    text-align: center;
+    margin: 30px;
+}
+
+.box_pri h4 {
+    justify-content: space-around;
+}
+.box_check {
+    text-align: center;
+}
+.btn {
+    text-align: center;
+}
+*/
+
+/* ここからハンバーガーメニュー */
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #3584bb;
+}
+.menu-btn span, .menu-btn span:before, .menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255,255,255,0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top:0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing:  border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 0
+}
+

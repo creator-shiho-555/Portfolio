@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* CSS document */
+
+
+.firstview {              
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstview-pc {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.firstview-sp {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .firstview-pc {
+    display: none;
+  }
+
+  .firstview-sp{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  
+}

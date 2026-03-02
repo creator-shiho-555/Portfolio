@@ -109,7 +109,8 @@ th,td {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #ffffff;
+    /*background-color: #ffffff;　ナビゲーション白塗り*/
+    backdrop-filter: blur(8px);/*ナビゲーション透明*/
     height: 80px;
     z-index: 10;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
@@ -322,6 +323,10 @@ main .map img{
 */
 
 /* ここからハンバーガーメニュー */
+.hamburger-menu {
+    display: none;
+}
+
 .menu-btn {
     position: fixed;
     top: 10px;
@@ -414,3 +419,73 @@ main .map img{
     left: 0
 }
 
+
+@media (max-width: 800px) {
+    /* PC用のナビを隠し、ハンバーガーだけにする */
+    .header-site-menu {
+        display: none;
+    }
+
+      /* 隠していたハンバーガーメニューを表示させる */
+    .hamburger-menu {   
+        display: block;  
+    }
+    .menu-btn {
+        z-index: 9000; /* ヘッダー(100)より上に配置 */
+    }
+    .menu-content {
+        display: block;    /* 念のため表示を確実にする */
+        width: 100%;       /* 画面幅いっぱい */
+        height: 100vh;     /* 画面の高さ100%分（これが重要！） */
+        position: fixed;   /* 画面に固定 */
+        top: 0;            /* 画面の一番上から */
+        left: 100%;        /* 閉じてる時は右側に隠す */
+        z-index: 1000;      /* ヘッダーより上にくるように大きく設定 */
+        background-color: #3584bb; /* メニューの背景色 */
+        transition: all 0.5s;
+    }
+    /* メニューが開いたとき（チェックが入ったとき） */
+    #menu-btn-check:checked ~ .menu-content {
+        left: 0;           /* 画面の左端に合わせて全画面表示 */
+    }
+    /* メニュー内のリストの位置調整 */
+    .menu-content ul {
+        padding-top: 100px; /* ヘッダーと重ならないように上に余白を作る */
+    }
+
+    /* 1. 横並びを解除して縦並びにする */
+    main .box2 {
+        display: block; /* flexを解除 */
+    }
+
+    /* 2. 住所エリアの幅を100%にする */
+    main .box {
+        width: 100% !important;
+        padding: 0 20px; /* 左右に少し余白 */
+    }
+
+    /* 3. 住所エリアのテーブル調整 */
+    main .box table {
+        width: 100% !important;
+        margin: 20px auto !important;
+    }
+
+    /* 4. マップエリアの調整 */
+    main .map {
+        width: 100% !important;
+        margin-top: 30px;
+        padding: 0 10px; /* 画面端に少し余白 */
+    }
+
+    /* 5. 地図本体(iframe)を画面幅に収める */
+    main .map iframe {
+        width: 100% !important; /* 180%を100%に上書き */
+        height: 300px;         /* スマホで見やすい高さに固定 */
+    }
+    
+    /* 6. 見出しの調整 */
+    .midashi {
+        padding-top: 100px; /* 余白を少し詰める */
+        font-size: 22px;
+    }
+}

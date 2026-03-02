@@ -122,7 +122,8 @@ th,td {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #ffffff;
+    /*background-color: #ffffff;　ナビゲーション白塗り*/
+    backdrop-filter: blur(8px);/*ナビゲーション透明*/
     height: 80px;
     z-index: 10;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
@@ -318,6 +319,10 @@ nav .nav-logo{
 */
 
 /* ここからハンバーガーメニュー */
+.hamburger-menu {
+    display: none;
+}
+
 .menu-btn {
     position: fixed;
     top: 10px;
@@ -408,5 +413,77 @@ nav .nav-logo{
 }
 #menu-btn-check:checked ~ .menu-content {
     left: 0
+}
+/* --- レスポンシブ対応 (800px以下) --- */
+@media (max-width: 800px) {
+    /* PC用のナビを隠し、ハンバーガーだけにする */
+    .header-site-menu {
+        display: none;
+    }
+
+    .main {
+    padding-bottom: 220px;
+    }
+
+    /* 隠していたハンバーガーメニューを表示させる */
+    .hamburger-menu {   
+        display: block;  
+    }
+    .menu-btn {
+        z-index: 9000; /* ヘッダー(100)より上に配置 */
+    }
+    .menu-content {
+        display: block;    /* 念のため表示を確実にする */
+        width: 100%;       /* 画面幅いっぱい */
+        height: 100vh;     /* 画面の高さ100%分（これが重要！） */
+        position: fixed;   /* 画面に固定 */
+        top: 0;            /* 画面の一番上から */
+        left: 100%;        /* 閉じてる時は右側に隠す */
+        z-index: 1000;      /* ヘッダーより上にくるように大きく設定 */
+        background-color: #3584bb; /* メニューの背景色 */
+        transition: all 0.5s;
+    }
+    /* メニューが開いたとき（チェックが入ったとき） */
+    #menu-btn-check:checked ~ .menu-content {
+        left: 0;           /* 画面の左端に合わせて全画面表示 */
+    }
+    /* メニュー内のリストの位置調整 */
+    .menu-content ul {
+        padding-top: 100px; /* ヘッダーと重ならないように上に余白を作る */
+    }
+    
+     /* スマホの時は画像の幅を広げる */
+    .picture img {
+        width: 100%; 
+        max-width: 400px; /* 大きくなりすぎないよう制限 */
+        height: auto;
+        margin: 10px 0;
+    }
+
+    /* 1. 料金表の幅を柔軟にする */
+    table {
+        width: 90% !important; /* 500pxを上書きして画面の90%の幅にする */
+        min-width: auto;       /* 最小幅の設定があれば解除 */
+        font-size: 14px;       /* スマホで見やすいように少し文字を小さく */
+    }
+
+    /* 2. テーブルのセル内の余白を調整 */
+    th, td {
+        padding: 8px 5px !important;
+    }
+
+    /* 3. 見出しの上下余白をスマホ用に調整 */
+    .midashi {
+        padding-top: 100px; /* PC版の130pxから少し減らす */
+        font-size: 20px;
+    }
+
+    /* 4. フッターのコピーライトの余白修正（単位忘れ修正） */
+    .copyright {
+        margin-top: 50px !important; /* もともと 90 と単位がなかったので修正 */
+    }
+
+
+
 }
 

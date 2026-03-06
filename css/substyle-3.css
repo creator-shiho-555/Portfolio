@@ -152,10 +152,9 @@ header {
     margin-bottom: 1.5rem;
 }
 
-.details ul {
+ul {
     list-style: none;
     padding: 0;
-    display: flex;     /* 横並びの準備 */
     flex-wrap: wrap;   /* 幅が足りなくなったら折り返す */
     gap: 15px;         /* 要素間の隙間 */
 }

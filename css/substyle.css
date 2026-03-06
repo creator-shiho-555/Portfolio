@@ -232,6 +232,12 @@ footer{
     font-size: 15px;
 }
 
+.text3 {
+    padding-top: 40px;
+    font-size: 30px;
+    color: #800020;
+}
+
 footer .onlineshop{
     width: 100%;
     padding: 30px 0 0px 0;
@@ -499,4 +505,10 @@ footer .copy{
     .pagetop a {
         display: none;
     }
+
+    .text3 {
+    font-size: 20px;
+    
+}
+
 }

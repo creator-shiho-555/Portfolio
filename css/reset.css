@@ -61,7 +61,6 @@ a {
     text-decoration:none;
 }
 
-
 abbr[title], dfn[table] {
     border-bottom:1px dotted;
 }
@@ -83,4 +82,16 @@ hr {
 
 input, select {
     vertical-align:middle;
+}
+
+/* 1. 今後のためにbox-sizingだけを取り入れる（※これを入れると少しサイズが変わる場所が出る可能性があるので、その部分だけ微調整してください） */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. スマホ対応（レスポンシブ）のときに画像がはみ出さないようにする */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* 下に謎の隙間ができるのを防ぐ */
 }

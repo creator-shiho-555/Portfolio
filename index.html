@@ -1,75 +1,236 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
     <head>
         <meta charset="utf-8">
-        <title>My portfolio</title>
+        <title>slon ÁZU｜瀬戸市のネイル＆エステ</title>
+        <meta name="description" content="瀬戸市の親子で営むネイル＆エステサロン『サロンÁZU（アズ）』。完全予約制のアットホームな空間で、丁寧な定額ネイルと本格エステをお届けします。">
         <meta name="viewport" content="width=device-width, inital-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="img/favicon.ico">
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <script src="main.js"></script>
+        <link rel="icon" href="img/favicon.png">
+        <!-- ここからフォントのリンク -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=M+PLUS+2:wght@100..900&display=swap" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Pacifico&display=swap" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">         
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">         
+
+         <!-- ここまで -->
     </head>
 
 <body>
+    <header class="header">
 
-    <div id="site-wrapper">
+    <!--ここからハンバーガーメニュー-->
+    <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check"  class="input-hidden">
+        <label for="menu-btn-check" class="menu-btn">
+        <span></span>
+        </label>
+    <!--ここからメニュー-->
+      <div class="menu-content">
+          <ul>
+              <li><a href="#concept">Concept</a></li>
+              <li><a href="#staff">Staff</a></li>   
+              <li><a href="#">Menu</a></li>
+              <li><a href="#access">Access</a></li>
+          </ul>
+      </div>
+        <!--ここまでがメニュー-->
+    </div>
+    <!--ここまでハンバーガーメニュー-->    
 
-    <header id="site-header">
-      <h1 id="site-logo">
-         <a href="#"><img src="img/logo.jpg" alt=""></a>
-         <p>SHIHOKO'S<br>web site</p>
-      </h1>
+    <div class="header-inner">
+        <div class="header-logo2">
+          <div class="header-logo">
+              <a  href="index.html">
+                <img src="img/logo.png" alt="aqarium">
+              </a>
+            <button class="toggle-menu-button"></button>
+          </div>  
+        </div>
+        <div class="header-site-menu">
+            <nav class="site-menu">
+                <ul>
+                    <li><a href="#concept">Concept</a></li>
+                    <li><a href="#staff">Staff</a></li>   
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#access">Access</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </div>     
+</header>
 
-<!-- ハンバーガー -->
-    <input type="checkbox" id="toggle">
-    <label id="menu-button" for="toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-   
-<!-- ナビ -->
- <nav id="site-nav" class="center-nav">
-   <ul>
-      <li><a href="#"><img src="img/7.png">Home</a></li>
-      <li><a href="contents/index-4.html"><img src="img/8.png">Profile</a></li>
-      <li><a href="contents/index-2.html"><img src="img/9.png">Collections</a></li>
-      <li><a href="contents/index-3.html"><img src="img/10.png">Contact</a></li>
-   </ul>
- </nav>
+<main class="main">
+    <div class="first-view">
+    
+    </div>
+<div class="lead-text">
+    <div class="concept-inner">
+        <div id="concept"class="pc-lead-text">
+            <span class="concept-label">Concept</span>
+            <h2 class="concept-title">母と娘で営む、<br>"ほっとできる隠れ家サロン"</h2>
+            
+            <p class="concept-body">
+                エステは母、ネイルは娘が担当し、親子ならではの<br>
+                あたたかさと安心感を大切にしています。<br>
+                忙しい毎日の中で誰にも気を使わずリラックスができる<br>
+                "自分だけの特別な時間"を過ごせる場所。<br>
+                お客様ひとりひとりのお悩みに寄り添いながら施術を<br>
+                ご提案いたします。<br>
+                エステではララピール・ハンドラ毛穴洗浄・オメガPDT<br>
+                などの先進ケアを取り入れ脱毛やまつげパーマ、そしてネイル。<br>
+                トータルであなたの美しさをサポート。<br>
+                気軽に、そして長く通いたくなる"第二の居場所"でありたい。<br>
+                <strong>「 VÉO 」へ、ようこそ。</strong>
+            </p>
+        </div>
+        <div class="photo-box">
+             <div class="concept-image">
+                 <img src="img/photo6.png" id="mainImg" alt="サロンの風景" onclick="nextImg()">
+             </div>
 
-    </header>
+             <div class="thumbnail-list">
+                 <img src="img/photo6.png" alt="サロン6" onmouseover="changeImg(this.src)">
+                 <img src="img/photo1.jpg" alt="サロン1" onmouseover="changeImg(this.src)">
+                 <img src="img/photo2.jpg" alt="サロン2" onmouseover="changeImg(this.src)">
+                 <img src="img/photo3.jpg" alt="サロン3" onmouseover="changeImg(this.src)">
+                 <img src="img/photo4.jpg" alt="サロン4" onmouseover="changeImg(this.src)">
+                 <img src="img/photo5.jpg" alt="サロン5" class="pc-only" onmouseover="changeImg(this.src)">
+             </div>
+        </div>
+    </div>
 
- <main>
-   <div class="new-top">
-      <p class="text">welcom my homepage.</p>
-      <p class="more"><a href="#">More</a></p>
-   </div>
- </main>
-
- <!-- スライドショー(cssのみ) -->
-  <aside id="mainimg">
-   <div class="slide slide1"></div>
-   <div class="slide slide2"></div>
-   <div class="slide slide3"></div>
-  </aside>
-
-<ul class="icons">
-   <li><a href="#"><img src="img/Instagram_Glyph_Gradient.png"></a></li>
-   <li><a href="#"><img src="img/LINE_Brand_icon.png"></a></li>
-   <li><a href="#"><img src="img/Facebook_Logo_Primary.png"></a></li>
-</ul>  
-
-<footer>
-   <small>copylight© TAKIMOTO</small>
-</footer>
-
-<!-- ページトップへ移動するコード
-<div class="pagetop"><a href="#">↑</a></div>
--->
 
 </div>
+
+
+
+
+<section id="staff" class="staff-section">
+    <div class="staff-inner">
+        <span class="concept-label">STAFF</span>
+        <h2 class="concept-title">プロフェッショナルな親子が、<br>あなたの美しさをサポートします。</h2>
+
+        <div class="staff-flex">
+            <div class="staff-card">
+                <div class="staff-image-1">
+                    <img src="img/staff-mother.png" alt="エステ担当 お母さん">
+                </div>
+                <div class="staff-info">
+                    <p class="staff-en-name">Esthetician</p>
+                    <p class="staff-text">
+                        歴20年以上の確かな技術で、お肌のお悩みに深く寄り添います。ララピールや毛穴洗浄など、最新のケアでお客様本来の輝きを引き出すのが得意です。
+                    </p>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <div class="staff-image-2">
+                    <img src="img/staff-daughter.png" alt="ネイル担当 娘さん">
+                </div>
+                <div class="staff-info">
+                    <p class="staff-en-name">Nail Artist</p>
+                    <p class="staff-text">
+                        トレンドを取り入れたニュアンスネイルや、自爪に優しい施術を大切にしています。指先から日常が少し楽しくなるようなデザインをご提案します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="reserve-btn-area">
+    <a class=menu href=""><img src="img/reserve.png"></a>
+</div>
+
+<section id="access" class="access-section">
+    <div class="access-inner">
+        <span class="concept-label">ACCESS</span>
+        <h2 class="concept-title">サロンの場所</h2>
+<div class="access-text">
+    <div class="access-row">
+        <strong class="row-label">住所：</strong>
+        <span class="row-content">##県##市#####町###丁目##番地##号 ###号室</span>
+    </div>
+    
+    <div class="access-row">
+        <strong class="row-label">営業時間：</strong>
+        <span class="row-content">
+            10:00〜18:00（最終受付 17:00）<br>
+            <small>※18:00以降ご希望の方はお電話、またはLINEでご確認ください。</small>
+        </span>
+    </div>
+
+    <div class="access-row">
+        <strong class="row-label">定休日：</strong>
+        <span class="row-content">不定休</span>
+    </div>
+
+    <div class="access-row">
+        <strong class="row-label">駐車場：</strong>
+        <span class="row-content">##屋#####さんの裏（3番又は8番）</span>
+    </div>
+
+    <div class="access-row">
+        <strong class="row-label">アクセス・道案内：</strong>
+        <span class="row-content">
+            #####駅の改札を出たら#####の前を通り右手にある横断歩道を渡る。<br>
+            そのまま橋を渡り切ったら次の横断歩道も渡り右方向へ進む。左手にある美容室<br>
+            ######さんの角を左折。大通りを渡り右に少し歩くと建物名の「#####」の<br>
+            看板があります。その通路を入るとお店があります。
+        </span>
+    </div>
+</div>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3240.522029103488!2d139.68930612413666!3d35.68876937956262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5p2x5Lqs6YO96YO95bqBIOWcsOWbsw!5e0!3m2!1sja!2sjp!4v1782711005686!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+    </div>
+</section>
+
+
+  <footer class="footer">
+    <nav class="site-menu">
+        <ul>
+            <li><a href="#concept">Concept</a></li>
+            <li><a href="#staff">Staff</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#access">Access</a></li>
+        </ul>
+    </nav>
+         <a class="footer-logo">
+             <img src="img/logo.png" alt="malta">
+         </a>
+                 <p class="footer-address">##県##市#####町###丁目##番地##号 ###号室</p>
+                 <p class="footer-tel">TEL 0000-00-0000</p>
+                 <p class="footer-time">OPEN 10:00~18:00</p>
+             <ul class="sns">
+                 <li><a href="#"><img src="img/LINE_Brand_icon.png"></a></li>
+                 <li><a href="#"><img src="img/Instagram_Glyph_Gradient.png"></a></li>
+             </ul>
+        <div class="pagetop"><a href="#">↑</a></div> <!-- ページトップ -->
+  </footer>
+
+  <script>
+document.querySelectorAll('.menu-content a').forEach(link => {
+    link.addEventListener('click', () => {
+        // チェックボックスのチェックを外す（＝メニューを閉じる）
+        document.getElementById('menu-btn-check').checked = false;
+    });
+});
+</script>
+
+<script>
+function changeImg(url) {
+document.getElementById('mainImg').src = url;
+}</script>
+
 </body>
 </html>
